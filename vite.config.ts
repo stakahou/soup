@@ -6,7 +6,7 @@ import { defineConfig } from "vite";
 export default defineConfig({
   plugins: [react()],
 
-  base: "/your-repo-name/",
+  base: "/soup/",
 
   build: {
     outDir: "dist",
