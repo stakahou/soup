@@ -6,7 +6,7 @@ import { defineConfig } from "vite";
 export default defineConfig({
   plugins: [react()],
 
-  base: "/soup/",
+  base: "/soup",
 
   build: {
     outDir: "dist",
@@ -17,8 +17,11 @@ export default defineConfig({
   },
 
   resolve: {
-    alias: {
-      "@": resolve(__dirname, "./src"),
-    },
+    alias: [
+      {
+        find: "@",
+        replacement: resolve(__dirname, "./src"),
+      },
+    ],
   },
 });
